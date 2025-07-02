@@ -1,0 +1,18 @@
+<odoo>
+    <record id="view_partner_form_koperasi" model="ir.ui.view">
+        <field name="name">res.partner.form.koperasi</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Koperasi">
+                    <group>
+                        <field name="is_koperasi_anggota"/>
+                        <field name="nomor_anggota" attrs="{'invisible': [('is_koperasi_anggota','=',False)]}"/>
+                        <field name="tanggal_gabung" attrs="{'invisible': [('is_koperasi_anggota','=',False)]}"/>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo> 

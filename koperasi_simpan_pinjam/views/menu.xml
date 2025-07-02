@@ -1,0 +1,19 @@
+<odoo>
+    <menuitem id="menu_koperasi_root" name="Koperasi" sequence="10"/>
+
+    <menuitem id="menu_koperasi_anggota" name="Anggota" parent="menu_koperasi_root" action="contacts.action_contacts" sequence="1"/>
+
+    <menuitem id="menu_koperasi_simpanan" name="Simpanan" parent="menu_koperasi_root" action="action_koperasi_simpanan" sequence="2"/>
+    <record id="action_koperasi_simpanan" model="ir.actions.act_window">
+        <field name="name">Simpanan</field>
+        <field name="res_model">koperasi.simpanan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_koperasi_pinjaman" name="Pinjaman" parent="menu_koperasi_root" action="action_koperasi_pinjaman" sequence="3"/>
+    <record id="action_koperasi_pinjaman" model="ir.actions.act_window">
+        <field name="name">Pinjaman</field>
+        <field name="res_model">koperasi.pinjaman</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo> 
